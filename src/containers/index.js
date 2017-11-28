@@ -7,7 +7,14 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import AppContainer from './AppContainer'
 import reducer from '../reducers/counterReducer';
 
-const store = createStore(reducer);
+
+let initialState = { count: 0 };
+
+const store = createStore(
+    reducer,
+    initialState,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 const node1 = document.getElementById('app');
 

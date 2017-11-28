@@ -8,7 +8,7 @@ export default class CountWidgetContainer extends React.Component {
         super(props);
 
         this.state = {
-            count: props.store.getState()
+            count: props.store.getState().count
         }
     }
 
@@ -18,7 +18,7 @@ export default class CountWidgetContainer extends React.Component {
 
     storeChanged = () => {
         this.setState({
-            count: this.props.store.getState()
+            count: this.props.store.getState().count
         });
 
     };
