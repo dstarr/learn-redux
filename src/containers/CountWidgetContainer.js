@@ -1,6 +1,7 @@
 import React from 'react';
 import {incrementCount, decrementCount} from "../actions/countActions";
 import CountWidget from "../components/CountWidget";
+import { Well } from 'react-bootstrap'
 
 export default class CountWidgetContainer extends React.Component {
 
@@ -34,9 +35,13 @@ export default class CountWidgetContainer extends React.Component {
     };
 
     render = () => {
-        return <CountWidget count={this.state.count}
-                            handleIncrementClick={this.handlePlusClick}
-                            handleDecrementClick={this.handleMinusClick}
-        />
-    }
-}
+
+        return (
+            <Well>
+                <CountWidget count={this.state.count}
+                             handleIncrementClick={this.handlePlusClick}
+                             handleDecrementClick={this.handleMinusClick} />
+            </Well>);
+
+    };
+};
