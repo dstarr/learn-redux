@@ -8,7 +8,23 @@ import AppContainer from './AppContainer'
 import reducer from '../reducers/counterReducer';
 
 
-let initialState = { count: 0 };
+let initialState = {
+    count: 0,
+    people: [
+        {id: 123, firstName: 'Bart', lastName: 'Simpson', occupation: 'Student'},
+        {id: 234, firstName: 'Otto', lastName: 'Unknown', occupation: 'Bus Driver'},
+        {id: 345, firstName: 'Homer', lastName: 'Simpson', occupation: 'Dad'},
+        {id: 456, firstName: 'Marge', lastName: 'Simpson', occupation: 'Mom'},
+        {id: 567, firstName: 'Maggie', lastName: 'Simpson', occupation: 'Baby'},
+        {id: 678, firstName: 'Lisa', lastName: 'Simpson', occupation: 'Good Student'}
+    ],
+    places: [
+        {id: 9, name: 'Moe\'s Tavern'},
+        {id: 3, name: 'Home'},
+        {id: 4, name: 'Springfield Elementary'},
+        {id: 5, name: 'Nuclear Power Plant'},
+    ]
+};
 
 const store = createStore(
     reducer,
