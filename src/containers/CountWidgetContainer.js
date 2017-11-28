@@ -1,6 +1,7 @@
 import React from 'react';
 import {incrementCount, decrementCount} from "../actions/countActions";
 import CountWidget from "../components/CountWidget";
+import {Well} from "react-bootstrap";
 
 export default class CountWidgetContainer extends React.Component {
 

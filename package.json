@@ -37,14 +37,14 @@
     "enzyme": "^3.1.1",
     "enzyme-adapter-react-16": "^1.0.4",
     "file-loader": "^1.1.5",
-    "jsdom": "^11.3.0",
+    "jsdom": "^11.5.1",
     "less": "^3.0.0-alpha.3",
     "less-loader": "^4.0.5",
     "mocha": "^4.0.1",
     "sass-import-modules": "^2.1.0",
     "style-loader": "^0.19.0",
-    "uglifyjs-webpack-plugin": "^1.0.1",
+    "uglifyjs-webpack-plugin": "^1.1.1",
     "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+    "webpack-dev-server": "^2.9.5"
   }
 }
