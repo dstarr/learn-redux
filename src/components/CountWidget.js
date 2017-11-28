@@ -13,10 +13,10 @@ let CountWidget = ({count, handleIncrementClick, handleDecrementClick}) => {
 };
 
 
-// CountWidget.PropTypes = {
-//     count: PropTypes.number.isRequired,
-//     handleIncrementClick: PropTypes.func.isRequired,
-//     handleDecrementClick: PropTypes.func.isRequired
-// };
+CountWidget.PropTypes = {
+    count: PropTypes.number.isRequired,
+    handleIncrementClick: PropTypes.func.isRequired,
+    handleDecrementClick: PropTypes.func.isRequired
+};
 
 export default CountWidget;
