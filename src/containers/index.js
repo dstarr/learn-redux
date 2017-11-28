@@ -1,16 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'babel-polyfill'
-import {createStore} from 'redux';
+import {createProvider as Provider} from "react-redux";
+
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-
 import AppContainer from './AppContainer'
-import reducer from '../reducers/counterReducer';
-
-const store = createStore(reducer);
+import configureStore from '../store/configureStore'
 
 const node1 = document.getElementById('app');
 
+
+let store = configureStore();
+
+
 if (node1) {
-    ReactDOM.render(<AppContainer store={store}/>, node1);
+    ReactDOM.render(
+        <AppContainer store={store}/>,
+
+    node1
+)
+    ;
 }
