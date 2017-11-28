@@ -1,26 +1,24 @@
 import React from 'react';
 import {incrementCount, decrementCount} from "../actions/countActions";
 import CountWidget from "../components/CountWidget";
-import Jumbotron from "react-bootstrap/es/Jumbotron";
 
-class CountWidgetContainer extends React.Component {
+export default class CountWidgetContainer extends React.Component {
 
     constructor(props) {
         super(props);
 
         this.state = {
-            count: 0
+            count: props.store.getState()
         }
     }
 
     componentDidMount = () => {
-        console.log('componentDidMount')
         this.props.store.subscribe(this.storeChanged);
     };
 
     storeChanged = () => {
         this.setState({
-            count: this.props.store.getState()
+            count: this.props.store.getState().count
         });
 
     };
@@ -38,12 +36,11 @@ class CountWidgetContainer extends React.Component {
     render = () => {
 
         return (
-            <Jumbotron>
+            <Well>
                 <CountWidget count={this.state.count}
                              handleIncrementClick={this.handlePlusClick}
                              handleDecrementClick={this.handleMinusClick} />
-            </Jumbotron>
-    )};
-}
+            </Well>);
 
-export default CountWidgetContainer;
+    };
+};

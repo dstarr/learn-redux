@@ -5,21 +5,19 @@ let initialState = {count: 0};
 
 export default function counterReducer(state=initialState, action) {
 
+    let newCount;
+
     switch (action.type) {
 
         case TYPES.INCREMENT_COUNT:
-            return Object.assign(
-                {},
-                state,
-                {count: state.count + 1})
 
-
+            newCount = state.count + 1;
+            return Object.assign({}, state, {count: newCount});
 
         case TYPES.DECREMENT_COUNT:
-            return Object.assign(
-                {},
-                state,
-                {count: state.count - 1})
+
+            newCount = state.count - 1;
+            return Object.assign({}, state, {count: newCount});
 
 
         default:
