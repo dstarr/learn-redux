@@ -1,9 +1,13 @@
 import {combineReducers} from 'redux';
-import counterReducer from './counterReducer';
+import countReducer from './countReducer';
+import peopleReducer from "./peopleReducer";
+import placesReducer from "./placesReducer";
 
 
 const rootReducer = combineReducers({
-    count: counterReducer(state, action)
+    people: peopleReducer,
+    places: placesReducer,
+    count: countReducer
 });
 
 export default rootReducer;

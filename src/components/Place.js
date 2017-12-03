@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-let Person = ({id, index, first, last, occupation, handleDelete}) => {
+let Person = ({id, index, name, handleDelete}) => {
 
     return (
         <tr key={index}>
             <td>{id}</td>
-            <td>{first + ' ' + last}</td>
-            <td>{occupation}</td>
+            <td>{name}</td>
             <td><button onClick={handleDelete(id)}>Delete</button></td>
         </tr>
     )
@@ -16,9 +15,7 @@ let Person = ({id, index, first, last, occupation, handleDelete}) => {
 
 Person.PropTypes = {
     id: PropTypes.number.isRequired,
-    first: PropTypes.string.isRequired,
-    last: PropTypes.string.isRequired,
-    occupation: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     handleDelete: PropTypes.func.isRequired
 };
 

@@ -1,6 +1,6 @@
 import * as TYPES from '../actions/actionTypes';
 
-function peopleReducer(state, action) {
+function peopleReducer(state = [], action) {
 
     switch (action.type) {
 

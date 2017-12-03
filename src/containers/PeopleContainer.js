@@ -21,17 +21,16 @@ class PeopleContainer extends React.Component {
     render = () => {
 
         const style = {
-            backgroundColor: 'red',
+            backgroundColor: 'green',
             margin: 20,
             padding: 20
         };
 
-        let people = this.state.people.map( (person, index) => (
-            // <p key={index}>Hello, {person.firstName} {person.lastName}. The {person.occupation}.</p>
+        let people = this.state.people.map((person, index) => (
             <Person id={person.id}
                     key={index}
                     first={person.firstName}
-                    last={person.last}
+                    last={person.lastName}
                     occupation={person.occupation}
                     handleDelete={this.onHandleDelete}
             />
@@ -44,12 +43,12 @@ class PeopleContainer extends React.Component {
                 <Table striped={true} responsive={true} bordered={true}>
                     <thead>
                     <tr>
+                        <th>ID</th>
                         <th>Name</th>
                         <th>Occupation</th>
                         <th>&nbsp;</th>
                     </tr>
                     {people}
-
                     </thead>
                 </Table>
             </Jumbotron>

@@ -8,7 +8,7 @@ export function addPerson() {
 }
 
 export function deletePerson() {
-    console.log('deletePerson Action fired');
+    console.log('deletePlace Action fired');
 
     return {
         type: TYPES.DELETE_PERSON

@@ -5,14 +5,13 @@ import {createStore} from 'redux';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 import AppContainer from './AppContainer'
-import reducer from '../reducers/counterReducer';
-
+import reducers from '../reducers';
 
 let initialState = {
     count: 0,
     people: [
         {id: 123, firstName: 'Bart', lastName: 'Simpson', occupation: 'Student'},
-        {id: 234, firstName: 'Otto', lastName: 'Unknown', occupation: 'Bus Driver'},
+        {id: 234, firstName: 'Otto', lastName: '', occupation: 'Bus Driver'},
         {id: 345, firstName: 'Homer', lastName: 'Simpson', occupation: 'Dad'},
         {id: 456, firstName: 'Marge', lastName: 'Simpson', occupation: 'Mom'},
         {id: 567, firstName: 'Maggie', lastName: 'Simpson', occupation: 'Baby'},
@@ -27,7 +26,7 @@ let initialState = {
 };
 
 const store = createStore(
-    reducer,
+    reducers,
     initialState,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
