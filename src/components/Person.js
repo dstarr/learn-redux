@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-let Person = ({id, index, first, last, occupation, handleDelete}) => {
+let Person = ({id, index, first, last, occupation, handleDelete, handleEdit}) => {
 
     return (
         <tr key={index}>
             <td>{id}</td>
             <td>{first + ' ' + last}</td>
             <td>{occupation}</td>
-            <td><button onClick={e => handleDelete(e, id)}>Delete</button></td>
+            <td>
+                <button onClick={e => handleDelete(e, id)}>Delete</button>
+            </td>
         </tr>
     )
 };
@@ -19,7 +21,8 @@ Person.PropTypes = {
     first: PropTypes.string.isRequired,
     last: PropTypes.string.isRequired,
     occupation: PropTypes.string.isRequired,
-    handleDelete: PropTypes.func.isRequired
+    handleDelete: PropTypes.func.isRequired,
+    handleEdit: PropTypes.func.isRequired
 };
 
 export default Person;
