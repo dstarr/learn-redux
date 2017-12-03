@@ -30,12 +30,11 @@ class PeopleContainer extends React.Component {
         this.props.store.dispatch(action);
     };
 
-
-
     render = () => {
 
         const style = {
             backgroundColor: 'green',
+            color: 'white',
             margin: 20,
             padding: 20
         };
