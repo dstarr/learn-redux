@@ -8,7 +8,7 @@ let Person = ({id, index, first, last, occupation, handleDelete}) => {
             <td>{id}</td>
             <td>{first + ' ' + last}</td>
             <td>{occupation}</td>
-            <td><button onClick={handleDelete(id)}>Delete</button></td>
+            <td><button onClick={((e) => handleDelete(e, id))}>Delete</button></td>
         </tr>
     )
 };

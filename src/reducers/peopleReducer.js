@@ -4,23 +4,12 @@ function peopleReducer(state = [], action) {
 
     switch (action.type) {
 
-        case TYPES.ADD_PERSON:
-
-            return {
-                ...state,
-                people: [...state, action.payload]
-            };
-
-
         case TYPES.DELETE_PERSON:
 
-            return {
-                ...state,
-                people: state.product.filter(person => person.id === action.payload)
-            };
+            console.log('ACTION ID ' + action.id);
 
-        // case TYPES.EDIT_PERSON:
-        // case TYPES.UPDATE_PERSON:
+            return state.filter(person => person.id !== action.id);
+
         default:
             return state;
     }

@@ -7,11 +7,12 @@ export function addPerson() {
     }
 }
 
-export function deletePerson() {
-    console.log('deletePlace Action fired');
+export function deletePerson(personId) {
+    console.log('deletePerson Action fired');
 
     return {
-        type: TYPES.DELETE_PERSON
+        type: TYPES.DELETE_PERSON,
+        id: personId
     }
 }
 

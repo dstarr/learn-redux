@@ -36,8 +36,6 @@ export default class CountWidgetContainer extends React.Component {
 
     render = () => {
 
-        console.log('WIDGET ' + this.state.count);
-
         return (
             <Well>
                 <CountWidget count={this.state.count}

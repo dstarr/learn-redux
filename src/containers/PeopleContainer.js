@@ -2,6 +2,7 @@ import React from 'react';
 import Jumbotron from "react-bootstrap/es/Jumbotron";
 import {Table} from "react-bootstrap";
 import Person from "../components/Person";
+import * as actions from '../actions/personActions'
 
 class PeopleContainer extends React.Component {
 
@@ -13,9 +14,22 @@ class PeopleContainer extends React.Component {
         }
     }
 
-    onHandleDelete = (id) => {
-        // delete the person passed back
+    componentDidMount = () => {
+        this.props.store.subscribe(this.storeChanged);
     };
+
+    storeChanged = () => {
+        this.setState({
+            people: this.props.store.getState().people
+        });
+
+    };
+
+    onHandleDelete = (event, id) => {
+        let action = actions.deletePerson(id);
+        this.props.store.dispatch(action);
+    };
+
 
 
     render = () => {
