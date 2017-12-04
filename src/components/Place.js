@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button } from 'react-bootstrap'
+
 
 let Person = ({id, index, name, handleDelete}) => {
 
@@ -7,7 +9,7 @@ let Person = ({id, index, name, handleDelete}) => {
         <tr key={index}>
             <td>{id}</td>
             <td>{name}</td>
-            <td><button onClick={handleDelete(id)}>Delete</button></td>
+            <td><Button onClick={e => handleDelete(e, id)}>Delete</Button></td>
         </tr>
     )
 };

@@ -2,26 +2,20 @@ import * as TYPES from '../actions/actionTypes';
 
 function placesReducer(state = [], action) {
 
+    for (let place in state) {
+
+        console.log(place);
+    }
+
     switch (action.type) {
-
-        case TYPES.ADD_PLACE:
-            console.log('Reducer ' + TYPES.ADD_PLACE);
-
-            return {
-                ...state,
-                people: [...state, action.payload]
-            };
-
 
         case TYPES.DELETE_PLACE:
 
-            console.log('Reducer ' + TYPES.DELETE_PLACE);
-            return {
-                ...state,
-                place: state.product.filter(place => place.id === action.id)
-            };
+            console.log('Reducer ' + TYPES.DELETE_PLACE + ' ' + action.id);
 
-        // case TYPES.EDIT_PLACE:
+            let x = state.filter(place => place.id !== action.id);
+
+            return x;
 
         default:
             return state;

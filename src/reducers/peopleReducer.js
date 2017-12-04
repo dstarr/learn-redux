@@ -6,8 +6,6 @@ function peopleReducer(state = [], action) {
 
         case TYPES.DELETE_PERSON:
 
-            console.log('ACTION ID ' + action.id);
-
             return state.filter(person => person.id !== action.id);
 
         default:

@@ -15,8 +15,20 @@ class PlacesContainer extends React.Component {
         }
     }
 
-    onHandleDelete = (id) => {
-        actions.deletePlace(id);
+    componentDidMount = () => {
+        this.props.store.subscribe(this.storeChanged);
+    };
+
+    storeChanged = () => {
+        this.setState({
+            places: this.props.store.getState().places
+        });
+
+    };
+
+    onHandleDelete = (e, id) => {
+        let action = actions.deletePlace(id);
+        this.props.store.dispatch(action);
     };
 
 
@@ -58,6 +70,6 @@ class PlacesContainer extends React.Component {
 
 PlacesContainer.PropTypes = {
     store: PropTypes.object.isRequired
-}
+};
 
 export default PlacesContainer;

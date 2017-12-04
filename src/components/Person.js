@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button } from 'react-bootstrap'
 
 let Person = ({id, index, first, last, occupation, handleDelete, handleEdit}) => {
 
@@ -9,7 +10,7 @@ let Person = ({id, index, first, last, occupation, handleDelete, handleEdit}) =>
             <td>{first + ' ' + last}</td>
             <td>{occupation}</td>
             <td>
-                <button onClick={e => handleDelete(e, id)}>Delete</button>
+                <Button onClick={e => handleDelete(e, id)}>Delete</Button>
             </td>
         </tr>
     )

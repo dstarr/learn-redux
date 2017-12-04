@@ -21,7 +21,7 @@ let initialState = {
         {id: 9, name: 'Moe\'s Tavern'},
         {id: 3, name: 'Home'},
         {id: 4, name: 'Springfield Elementary'},
-        {id: 5, name: 'Nuclear Power Plant'},
+        {id: 5, name: 'Nuclear Power Plant'}
     ]
 };
 
