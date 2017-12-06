@@ -1,6 +1,5 @@
 import React from 'react';
-import Jumbotron from "react-bootstrap/es/Jumbotron";
-import {Table} from "react-bootstrap";
+import {Table, Jumbotron, Button} from "react-bootstrap";
 import Person from "../components/Person";
 import * as actions from '../actions/personActions'
 
@@ -64,6 +63,10 @@ class PeopleContainer extends React.Component {
                     {people}
                     </thead>
                 </Table>
+
+                <div>
+                    <Button>Add Person</Button>
+                </div>
             </Jumbotron>
         );
     }

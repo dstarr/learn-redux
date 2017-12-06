@@ -7,13 +7,15 @@ import PlacesContainer from "./PlacesContainer";
 
 class AppContainer extends React.Component {
 
+    // <PeopleContainer store={this.props.store}/>
+
     render = () => {
 
         return (
             <div align={'center'}>
                 <CountWidgetContainer store={this.props.store}/>
                 <PlacesContainer store={this.props.store}/>
-                <PeopleContainer store={this.props.store}/>
+
             </div>
         );
     }

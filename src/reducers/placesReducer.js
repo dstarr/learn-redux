@@ -2,11 +2,6 @@ import * as TYPES from '../actions/actionTypes';
 
 function placesReducer(state = [], action) {
 
-    for (let place in state) {
-
-        console.log(place);
-    }
-
     switch (action.type) {
 
         case TYPES.DELETE_PLACE:

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {Table} from "react-bootstrap";
 import Place from "../components/Place";
 import * as actions from '../actions/placeActions'
+import AddPlaceContainer from "./AddPlaceContainer";
 
 
 class PlacesContainer extends React.Component {
@@ -36,7 +37,8 @@ class PlacesContainer extends React.Component {
 
         const style = {
             margin: 20,
-            padding: 20
+            padding: 20,
+            width: 800
 
         };
 
@@ -63,6 +65,7 @@ class PlacesContainer extends React.Component {
                     {places}
                     </thead>
                 </Table>
+                <AddPlaceContainer store={this.props.store} />
             </div>
         );
     }
