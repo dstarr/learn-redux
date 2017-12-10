@@ -15,6 +15,7 @@ class AppContainer extends React.Component {
         return (
             <div align={'center'}>
                 <CountWidgetContainer store={this.props.store}/>
+                <PeopleContainer store={this.props.store}/>
                 <PlacesContainer store={this.props.store}/>
 
             </div>

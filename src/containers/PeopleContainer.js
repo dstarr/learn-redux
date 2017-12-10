@@ -35,7 +35,8 @@ class PeopleContainer extends React.Component {
         const style = {
             backgroundColor: '5897E2',
             margin: 20,
-            padding: 20
+            padding: 20,
+            width: 800
         };
 
         let people = this.state.people.map((person, index) => (

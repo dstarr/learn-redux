@@ -44,28 +44,28 @@ class PlacesContainer extends React.Component {
         };
 
         let places = this.state.places.map((place, index) => (
-            <Place id={place.id}
-                   key={index}
+            <Place key={index}
                    name={place.name}
                    handleDelete={this.onHandleDelete}
             />
 
         ));
 
-
         return (
             <div style={style}>
                 <h1>Places</h1>
-                <Table striped={true} responsive={true} bordered={true}>
-\                    <thead>
+                <Table striped={false} responsive={true} bordered={false}>
+                    <thead>
                     <tr>
                         <th>Name</th>
                         <th>&nbsp;</th>
                     </tr>
-                    {places}
                     </thead>
+                    <tbody>
+                    {places}
+                    </tbody>
                 </Table>
-                <AddPlaceContainer store={this.props.store} />
+                <AddPlaceContainer store={this.props.store}/>
             </div>
         );
     }

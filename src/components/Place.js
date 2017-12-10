@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap'
 
 
-let Person = ({id, index, name, handleDelete}) => {
+let Person = ({index, name, handleDelete}) => {
 
     return (
         <tr key={index}>
