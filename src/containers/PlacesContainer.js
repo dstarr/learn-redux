@@ -38,7 +38,8 @@ class PlacesContainer extends React.Component {
         const style = {
             margin: 20,
             padding: 20,
-            width: 800
+            width: 800,
+            backgroundColor: 'FF9B45'
 
         };
 
@@ -56,7 +57,7 @@ class PlacesContainer extends React.Component {
             <div style={style}>
                 <h1>Places</h1>
                 <Table striped={true} responsive={true} bordered={true}>
-                    <thead>
+\                    <thead>
                     <tr>
                         <th>Name</th>
                         <th>&nbsp;</th>
