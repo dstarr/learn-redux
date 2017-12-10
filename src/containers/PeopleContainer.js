@@ -2,6 +2,7 @@ import React from 'react';
 import {Table, Jumbotron, Button} from "react-bootstrap";
 import Person from "../components/Person";
 import * as actions from '../actions/personActions'
+import AddPersonContainer from "./AddPersonContainer";
 
 class PeopleContainer extends React.Component {
 
@@ -52,8 +53,8 @@ class PeopleContainer extends React.Component {
 
 
         return (
-            <Jumbotron style={style}>
-                <Table striped={true} responsive={true} bordered={true}>
+            <div style={style}>
+                <Table>
                     <thead>
                     <tr>
                         <th>Name</th>
@@ -65,9 +66,10 @@ class PeopleContainer extends React.Component {
                 </Table>
 
                 <div>
-                    <Button>Add Person</Button>
+                    <hr/>
+                    <AddPersonContainer store={this.props.store}/>
                 </div>
-            </Jumbotron>
+            </div>
         );
     }
 }

@@ -45,11 +45,8 @@ class AddPlace extends React.Component {
                         onChange={this.onAddNameChange}
                     />
                     {' '}
-                    <Button bsStyle={'primary'} onClick={this.onSubmitNewPlace}>Add Place</Button>
+                    <Button onClick={this.onSubmitNewPlace}>Add Place</Button>
                 </FormGroup>
-
-
-
             </div>
         );
     }

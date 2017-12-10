@@ -1,14 +1,16 @@
 import * as TYPES from "./actionTypes";
 
-export function addPerson() {
-    console.log('addPerson Action fired');
+export function addPerson(first, last, occupation) {
+
     return {
-        type: TYPES.ADD_PERSON
+        type: TYPES.ADD_PERSON,
+        first: first,
+        last: last,
+        occupation: occupation
     }
 }
 
 export function deletePerson(first, last) {
-    console.log('deletePerson Action fired');
 
     return {
         type: TYPES.DELETE_PERSON,

@@ -65,6 +65,7 @@ class PlacesContainer extends React.Component {
                     {places}
                     </tbody>
                 </Table>
+                <hr/>
                 <AddPlaceContainer store={this.props.store}/>
             </div>
         );
