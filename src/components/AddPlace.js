@@ -18,8 +18,11 @@ class AddPlace extends React.Component {
         });
     };
 
-    onSubmitNewPlace = () => {
-
+    onSubmitNewPlace = (e) => {
+        this.props.handleAddPlace(this.state.newPlaceName);
+        this.setState({
+            newPlaceName: ''
+        })
     };
 
     render = () => {
@@ -51,5 +54,9 @@ class AddPlace extends React.Component {
         );
     }
 }
+
+AddPlace.PropTypes = {
+    handleAddPlace: PropTypes.func.required
+};
 
 export default AddPlace;

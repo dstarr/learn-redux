@@ -10,18 +10,18 @@ import reducers from '../reducers';
 let initialState = {
     count: 0,
     people: [
-        {id: 123, firstName: 'Bart', lastName: 'Simpson', occupation: 'Student'},
-        {id: 234, firstName: 'Otto', lastName: '', occupation: 'Bus Driver'},
-        {id: 345, firstName: 'Homer', lastName: 'Simpson', occupation: 'Dad'},
-        {id: 456, firstName: 'Marge', lastName: 'Simpson', occupation: 'Mom'},
-        {id: 567, firstName: 'Maggie', lastName: 'Simpson', occupation: 'Baby'},
-        {id: 678, firstName: 'Lisa', lastName: 'Simpson', occupation: 'Good Student'}
+        {firstName: 'Bart', lastName: 'Simpson', occupation: 'Student'},
+        {firstName: 'Otto', lastName: '', occupation: 'Bus Driver'},
+        {firstName: 'Homer', lastName: 'Simpson', occupation: 'Dad'},
+        {firstName: 'Marge', lastName: 'Simpson', occupation: 'Mom'},
+        {firstName: 'Maggie', lastName: 'Simpson', occupation: 'Baby'},
+        {firstName: 'Lisa', lastName: 'Simpson', occupation: 'Good Student'}
     ],
     places: [
-        {id: 9, name: 'Moe\'s Tavern'},
-        {id: 3, name: 'Home'},
-        {id: 4, name: 'Springfield Elementary'},
-        {id: 5, name: 'Nuclear Power Plant'}
+        {name: 'Moe\'s Tavern'},
+        {name: 'Home'},
+        {name: 'Springfield Elementary'},
+        {name: 'Nuclear Power Plant'}
     ]
 };
 

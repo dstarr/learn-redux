@@ -24,16 +24,16 @@ class PeopleContainer extends React.Component {
 
     };
 
-    onHandleDelete = (event, id) => {
-        let action = actions.deletePerson(id);
+    onHandleDelete = (event, firstName, lastName) => {
+        let action = actions.deletePerson(firstName, lastName);
         this.props.store.dispatch(action);
+
     };
 
     render = () => {
 
         const style = {
-            backgroundColor: 'green',
-            color: 'white',
+            backgroundColor: '5897E2',
             margin: 20,
             padding: 20
         };
@@ -55,7 +55,6 @@ class PeopleContainer extends React.Component {
                 <Table striped={true} responsive={true} bordered={true}>
                     <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Name</th>
                         <th>Occupation</th>
                         <th>&nbsp;</th>

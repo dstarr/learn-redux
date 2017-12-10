@@ -7,25 +7,12 @@ export function addPerson() {
     }
 }
 
-export function deletePerson(personId) {
+export function deletePerson(first, last) {
     console.log('deletePerson Action fired');
 
     return {
         type: TYPES.DELETE_PERSON,
-        id: personId
-    }
-}
-
-export function editPerson() {
-    console.log('editPerson Action fired');
-    return {
-        type: TYPES.EDIT_PERSON
-    }
-}
-
-export function updatePerson() {
-    console.log('updatePerson Action fired');
-    return {
-        type: TYPES.UPDATE_PERSON
+        first: first,
+        last: last
     }
 }

@@ -7,6 +7,7 @@ import PlacesContainer from "./PlacesContainer";
 
 class AppContainer extends React.Component {
 
+    // <PlacesContainer store={this.props.store}/>
     // <PeopleContainer store={this.props.store}/>
 
     render = () => {

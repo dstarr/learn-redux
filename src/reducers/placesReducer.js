@@ -6,15 +6,21 @@ function placesReducer(state = [], action) {
 
         case TYPES.DELETE_PLACE:
 
-            console.log('Reducer ' + TYPES.DELETE_PLACE + ' ' + action.id);
+            console.log('Reducer ' + TYPES.DELETE_PLACE + ' ' + action.name);
 
-            let x = state.filter(place => place.id !== action.id);
+            return state.filter(place => place.name !== action.name);
 
-            return x;
+
+        case TYPES.ADD_PLACE:
+
+            const place = { name: action.name };
+
+            return state.concat(place);
 
         default:
             return state;
     }
+
 }
 
 export default placesReducer;

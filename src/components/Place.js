@@ -7,16 +7,14 @@ let Person = ({id, index, name, handleDelete}) => {
 
     return (
         <tr key={index}>
-            <td>{id}</td>
             <td>{name}</td>
-            <td><Button onClick={e => handleDelete(e, id)}>Delete</Button></td>
+            <td><Button onClick={e => handleDelete(e, name)}>Delete</Button></td>
         </tr>
     )
 };
 
 
 Person.PropTypes = {
-    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     handleDelete: PropTypes.func.isRequired
 };

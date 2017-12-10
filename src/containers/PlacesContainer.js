@@ -27,8 +27,8 @@ class PlacesContainer extends React.Component {
 
     };
 
-    onHandleDelete = (e, id) => {
-        let action = actions.deletePlace(id);
+    onHandleDelete = (e, name) => {
+        let action = actions.deletePlace(name);
         this.props.store.dispatch(action);
     };
 
@@ -58,7 +58,6 @@ class PlacesContainer extends React.Component {
                 <Table striped={true} responsive={true} bordered={true}>
                     <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Name</th>
                         <th>&nbsp;</th>
                     </tr>
