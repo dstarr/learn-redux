@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap'
 
-let Person = ({id, index, first, last, occupation, handleDelete}) => {
+let Person = ({index, first, last, occupation, handleDelete}) => {
 
     return (
         <tr key={index}>
@@ -24,7 +24,6 @@ Person.PropTypes = {
 };
 
 export default Person;
-
 
 
 

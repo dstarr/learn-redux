@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap'
 
 
-let Person = ({index, name, handleDelete}) => {
+let Place = ({index, name, handleDelete}) => {
 
     return (
         <tr key={index}>
@@ -14,12 +14,12 @@ let Person = ({index, name, handleDelete}) => {
 };
 
 
-Person.PropTypes = {
+Place.PropTypes = {
     name: PropTypes.string.isRequired,
     handleDelete: PropTypes.func.isRequired
 };
 
-export default Person;
+export default Place;
 
 
 
