@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'babel-polyfill'
-import {createStore} from 'redux';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import {createStore, combineReducers, applyMiddleware, compose} from 'redux'
+import {Provider} from 'react-redux';
+import createHistory from 'history/createBrowserHistory';
+import {ConnectedRouter, routerReducer, routerMiddleware} from 'react-router-redux'
 
+import 'babel-polyfill'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import App from './App'
 import reducers from './reducers';
 
@@ -24,14 +27,35 @@ let initialState = {
     ]
 };
 
+// Create a history of your choosing (we're using a browser history in this case)
+const history = createHistory();
+
+const middleware = routerMiddleware(history);
+
+// Build the middleware for intercepting and dispatching navigation actions
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+// Add the reducer to your store on the `router` key
+// Also apply our middleware for navigating
+// noinspection JSCheckFunctionSignatures
 const store = createStore(
     reducers,
     initialState,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    composeEnhancers(applyMiddleware(...middleware))
 );
 
+// Now you can dispatch navigation actions from anywhere!
+// store.dispatch(push('/foo')
 const node1 = document.getElementById('app');
 
 if (node1) {
-    ReactDOM.render(<App store={store}/>, node1);
+    ReactDOM.render(
+        <Provider store={store}>
+            <ConnectedRouter history={history}>
+                <App store={store}/>
+            </ConnectedRouter>
+        </Provider>,
+
+        node1
+    );
 }

@@ -3,17 +3,13 @@ import PropTypes from 'prop-types';
 import PeopleContainer from "./containers/PeopleContainer";
 import PlacesContainer from "./containers/PlacesContainer";
 import Header from './components/Header';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import Home from './components/Home';
 
 
 const App = (props) => {
 
-    // <PlacesContainer store={this.props.store}/>
-    // <PeopleContainer store={this.props.store}/>
-
     return (
-        <Router>
             <div align={'center'}>
 
                 <Header/>
@@ -27,7 +23,7 @@ const App = (props) => {
 
 
             </div>
-        </Router>
+
     );
 }
 
