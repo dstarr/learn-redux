@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import PeopleContainer from "./containers/PeopleContainer";
 import PlacesContainer from "./containers/PlacesContainer";
 import Header from './components/Header';
-import {BrowserRouter as Router} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import Home from './components/Home';
 
 
-const AppContainer = (props) => {
+const App = (props) => {
 
     // <PlacesContainer store={this.props.store}/>
     // <PeopleContainer store={this.props.store}/>
@@ -16,8 +17,14 @@ const AppContainer = (props) => {
             <div align={'center'}>
 
                 <Header/>
-                <PeopleContainer store={props.store}/>
-                <PlacesContainer store={props.store}/>
+                <Route path={'/'} component={Home} exact={true} />
+                <Route path={'/people'} render={() => {
+                    return <PeopleContainer store={props.store} />
+                }} />
+                <Route path={'/places'} render={() => {
+                    return <PlacesContainer store={props.store} />
+                }} />
+
 
             </div>
         </Router>
@@ -25,11 +32,11 @@ const AppContainer = (props) => {
 }
 
 
-AppContainer.propTypes = {
+App.propTypes = {
     store: PropTypes.object.isRequired
 };
 
-export default AppContainer;
+export default App;
 
 
 

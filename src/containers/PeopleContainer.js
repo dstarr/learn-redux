@@ -54,6 +54,7 @@ class PeopleContainer extends React.Component {
 
         return (
             <div style={style}>
+                <h1>People</h1>
                 <Table>
                     <thead>
                     <tr>

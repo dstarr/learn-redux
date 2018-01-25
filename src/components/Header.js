@@ -9,7 +9,7 @@ const Header = (props) => {
             <h4>
                 <Link to='/places'>Places</Link>
                 {' | '}
-                <Link to='/>people'>People</Link>
+                <Link to='/people'>People</Link>
             </h4>
         </div>
 );

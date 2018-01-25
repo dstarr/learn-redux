@@ -1,4 +1,6 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 //const webpack = require('webpack');
 //const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
@@ -6,10 +8,13 @@ const dist = path.join(__dirname, 'dist');
 
 module.exports = {
 
+
     entry: path.join(__dirname, 'src', 'index.js'),
 
+    context: path.resolve(__dirname),
+
     output: {
-        path: dist,
+        path: path.join(__dirname, '/public/dist'),
         filename: 'bundle.js',
         publicPath: '/dist'
     },
@@ -40,7 +45,14 @@ module.exports = {
             }
         ]
     },
+
     plugins: [
+        new HtmlWebpackPlugin()
         //new UglifyJSPlugin()
-    ]
+
+    ],
+
+    devServer: {
+        historyApiFallback: true
+    }
 };
