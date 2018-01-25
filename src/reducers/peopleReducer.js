@@ -5,7 +5,6 @@ function peopleReducer(state = [], action) {
     switch (action.type) {
 
         case TYPES.ADD_PERSON:
-            console.log('Reducer fired: ' + TYPES.ADD_PERSON);
 
             const person = {
                 firstName: action.first,

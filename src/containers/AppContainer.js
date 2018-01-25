@@ -1,31 +1,26 @@
 import React from 'react';
-import CountWidgetContainer from "./CountWidgetContainer";
 import PropTypes from 'prop-types';
 import PeopleContainer from "./PeopleContainer";
 import PlacesContainer from "./PlacesContainer";
 
 
-class AppContainer extends React.Component {
+const AppContainer = (props) => {
 
     // <PlacesContainer store={this.props.store}/>
     // <PeopleContainer store={this.props.store}/>
 
-    render = () => {
+    return (
+        <div align={'center'}>
+            <PeopleContainer store={props.store}/>
+            <PlacesContainer store={props.store}/>
 
-        return (
-            <div align={'center'}>
-                <CountWidgetContainer store={this.props.store}/>
-                <PeopleContainer store={this.props.store}/>
-                <PlacesContainer store={this.props.store}/>
-
-            </div>
-        );
-    }
+        </div>
+    );
 }
 
 
-AppContainer.PropTypes = {
-  store: PropTypes.object.isRequired
+AppContainer.propTypes = {
+    store: PropTypes.object.isRequired
 };
 
 export default AppContainer;

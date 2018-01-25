@@ -8,7 +8,6 @@ import AppContainer from './AppContainer'
 import reducers from '../reducers';
 
 let initialState = {
-    count: 0,
     people: [
         {firstName: 'Bart', lastName: 'Simpson', occupation: 'Student'},
         {firstName: 'Otto', lastName: '', occupation: 'Bus Driver'},
