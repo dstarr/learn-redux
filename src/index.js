@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {createStore, combineReducers, applyMiddleware, compose} from 'redux'
+import {createStore, applyMiddleware, compose} from 'redux'
 import {Provider} from 'react-redux';
 import createHistory from 'history/createBrowserHistory';
-import {ConnectedRouter, routerReducer, routerMiddleware} from 'react-router-redux'
+import {ConnectedRouter, routerMiddleware} from 'react-router-redux'
 
 import 'babel-polyfill'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
@@ -12,17 +12,17 @@ import reducers from './reducers';
 
 let initialState = {
     people: [
-        {firstName: 'Bart', lastName: 'Simpson', occupation: 'Student'},
+        {firstName: 'Bart', lastName: 'Starr', occupation: 'Student'},
         {firstName: 'Otto', lastName: '', occupation: 'Bus Driver'},
-        {firstName: 'Homer', lastName: 'Simpson', occupation: 'Dad'},
-        {firstName: 'Marge', lastName: 'Simpson', occupation: 'Mom'},
-        {firstName: 'Maggie', lastName: 'Simpson', occupation: 'Baby'},
-        {firstName: 'Lisa', lastName: 'Simpson', occupation: 'Good Student'}
+        {firstName: 'Homer', lastName: 'Starr', occupation: 'Dad'},
+        {firstName: 'Marge', lastName: 'Starr', occupation: 'Mom'},
+        {firstName: 'Maggie', lastName: 'Starr', occupation: 'Baby'},
+        {firstName: 'Lisa', lastName: 'Starr', occupation: 'Good Student'}
     ],
     places: [
         {name: 'Moe\'s Tavern'},
         {name: 'Home'},
-        {name: 'Springfield Elementary'},
+        {name: 'Starrfield Elementary'},
         {name: 'Nuclear Power Plant'}
     ]
 };
