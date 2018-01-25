@@ -4,7 +4,6 @@ import {createStore, applyMiddleware, compose} from 'redux'
 import {Provider} from 'react-redux';
 import createHistory from 'history/createBrowserHistory';
 import {ConnectedRouter, routerMiddleware} from 'react-router-redux'
-
 import 'babel-polyfill'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import App from './App'
