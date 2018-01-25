@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'babel-polyfill'
 import {createStore} from 'redux';
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
-import AppContainer from './AppContainer'
-import reducers from '../reducers';
+import App from './App'
+import reducers from './reducers';
 
 let initialState = {
     people: [
@@ -33,5 +33,5 @@ const store = createStore(
 const node1 = document.getElementById('app');
 
 if (node1) {
-    ReactDOM.render(<AppContainer store={store}/>, node1);
+    ReactDOM.render(<App store={store}/>, node1);
 }
