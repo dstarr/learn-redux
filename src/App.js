@@ -21,7 +21,6 @@ const App = (props) => {
                     return <PlacesContainer store={props.store} />
                 }} />
 
-
             </div>
 
     );
