@@ -3,9 +3,8 @@ import React from 'react';
 const Home = () => {
 
     return (
-        <div>
+        <div style={{marginTop: 50}}>
             <img src='/assets/codelife.png'/>
-            <h3>People and Places</h3>
         </div>
 
     );

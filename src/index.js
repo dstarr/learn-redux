@@ -11,8 +11,8 @@ import reducers from './reducers';
 
 let initialState = {
     people: [
-        {firstName: 'Bart', lastName: 'Starr', occupation: 'Student'},
-        {firstName: 'Otto', lastName: '', occupation: 'Bus Driver'},
+        {firstName: 'Bart', lastName: 'Starr', occupation: 'Bad Student'},
+        {firstName: 'Otto', lastName: 'Starr', occupation: 'Bus Driver'},
         {firstName: 'Homer', lastName: 'Starr', occupation: 'Dad'},
         {firstName: 'Marge', lastName: 'Starr', occupation: 'Mom'},
         {firstName: 'Maggie', lastName: 'Starr', occupation: 'Baby'},
