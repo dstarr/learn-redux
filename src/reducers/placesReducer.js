@@ -6,10 +6,7 @@ function placesReducer(state = [], action) {
 
         case TYPES.DELETE_PLACE:
 
-            console.log('Reducer ' + TYPES.DELETE_PLACE + ' ' + action.name);
-
             return state.filter(place => place.name !== action.name);
-
 
         case TYPES.ADD_PLACE:
 

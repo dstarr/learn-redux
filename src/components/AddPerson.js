@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Modal, Button, Form, FormGroup, FormControl} from 'react-bootstrap';
+import {Button, FormGroup, FormControl} from 'react-bootstrap';
 
 class AddPerson extends React.Component {
 
@@ -12,34 +12,6 @@ class AddPerson extends React.Component {
             newLastName: '',
             newOccupation: ''
         }
-    };
-
-
-    onFirstNameChange = (e) => {
-        this.setState({
-            newFirstName: e.target.value
-        });
-    };
-
-    onLastNameChange = (e) => {
-        this.setState({
-            newLastName: e.target.value
-        });
-    };
-
-    onOccupationChange = (e) => {
-        this.setState({
-            newOccupation: e.target.value
-        });
-    };
-
-    onSubmitNewPerson = (e) => {
-        this.props.handleAddPerson(this.state.newFirstName, this.state.newLastName, this.state.newOccupation);
-        this.setState({
-            newFirstName: '',
-            newLastName: '',
-            newOccupation: ''
-        })
     };
 
     render = () => {
@@ -82,10 +54,36 @@ class AddPerson extends React.Component {
                     <Button onClick={this.onSubmitNewPerson}>Add Person</Button>
                 </FormGroup>
 
-
             </div>
         );
-    }
+    };
+
+    onFirstNameChange = (e) => {
+        this.setState({
+            newFirstName: e.target.value
+        });
+    };
+
+    onLastNameChange = (e) => {
+        this.setState({
+            newLastName: e.target.value
+        });
+    };
+
+    onOccupationChange = (e) => {
+        this.setState({
+            newOccupation: e.target.value
+        });
+    };
+
+    onSubmitNewPerson = (e) => {
+        this.props.handleAddPerson(this.state.newFirstName, this.state.newLastName, this.state.newOccupation);
+        this.setState({
+            newFirstName: '',
+            newLastName: '',
+            newOccupation: ''
+        })
+    };
 }
 
 AddPerson.PropTypes = {

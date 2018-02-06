@@ -17,6 +17,13 @@ class AddPlaceContainer extends React.Component {
         this.props.store.subscribe(this.storeChanged);
     };
 
+    render = () => {
+
+        return (
+            <AddPlace handleAddPlace={this.handleAddPlace}/>
+        );
+    };
+
     storeChanged = () => {
         this.setState({
             people: this.props.store.getState().people
@@ -27,13 +34,6 @@ class AddPlaceContainer extends React.Component {
         const action = actions.addPlace(placeName);
         this.props.store.dispatch(action);
     };
-
-    render = () => {
-
-        return (
-            <AddPlace handleAddPlace={this.handleAddPlace}/>
-        );
-    }
 }
 
 export default AddPlaceContainer;

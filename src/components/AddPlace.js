@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Modal, Button, Form, FormGroup, FormControl} from 'react-bootstrap';
+import {Button, FormGroup, FormControl} from 'react-bootstrap';
 
 class AddPlace extends React.Component {
 
@@ -11,19 +11,6 @@ class AddPlace extends React.Component {
             newPlaceName: ''
         };
     }
-
-    onAddNameChange = (e) => {
-        this.setState({
-            newPlaceName: e.target.value
-        });
-    };
-
-    onSubmitNewPlace = (e) => {
-        this.props.handleAddPlace(this.state.newPlaceName);
-        this.setState({
-            newPlaceName: ''
-        })
-    };
 
     render = () => {
 
@@ -49,7 +36,20 @@ class AddPlace extends React.Component {
                 </FormGroup>
             </div>
         );
-    }
+    };
+
+    onAddNameChange = (e) => {
+        this.setState({
+            newPlaceName: e.target.value
+        });
+    };
+
+    onSubmitNewPlace = (e) => {
+        this.props.handleAddPlace(this.state.newPlaceName);
+        this.setState({
+            newPlaceName: ''
+        })
+    };
 }
 
 AddPlace.PropTypes = {
