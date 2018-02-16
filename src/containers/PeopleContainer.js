@@ -1,5 +1,5 @@
 import React from 'react';
-import {Table, Jumbotron, Button} from "react-bootstrap";
+import {Table} from "react-bootstrap";
 import Person from "../components/Person";
 import * as actions from '../actions/personActions'
 import AddPersonContainer from "./AddPersonContainer";
@@ -10,25 +10,15 @@ class PeopleContainer extends React.Component {
         super(props);
 
         this.state = {
-            people: props.store.getState().people
+            people: []
         }
     }
 
-    componentDidMount = () => {
+    componentWillMount = () => {
         this.props.store.subscribe(this.storeChanged);
-    };
-
-    storeChanged = () => {
         this.setState({
             people: this.props.store.getState().people
         });
-
-    };
-
-    onHandleDelete = (event, firstName, lastName) => {
-        let action = actions.deletePerson(firstName, lastName);
-        this.props.store.dispatch(action);
-
     };
 
     render = () => {
@@ -48,7 +38,6 @@ class PeopleContainer extends React.Component {
                     occupation={person.occupation}
                     handleDelete={this.onHandleDelete}
             />
-
         ));
 
 
@@ -72,7 +61,19 @@ class PeopleContainer extends React.Component {
                 </div>
             </div>
         );
-    }
+    };
+
+    storeChanged = () => {
+        this.setState({
+            people: this.props.store.getState().people
+        });
+
+    };
+
+    onHandleDelete = (event, firstName, lastName) => {
+        let action = actions.deletePerson(firstName, lastName);
+        this.props.store.dispatch(action);
+    };
 }
 
 export default PeopleContainer;

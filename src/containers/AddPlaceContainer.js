@@ -6,15 +6,6 @@ class AddPlaceContainer extends React.Component {
 
     constructor(props) {
         super(props);
-
-        this.state = {
-            people: this.props.store.getState().places
-        }
-
-    };
-
-    componentDidMount = () => {
-        this.props.store.subscribe(this.storeChanged);
     };
 
     render = () => {
@@ -22,12 +13,6 @@ class AddPlaceContainer extends React.Component {
         return (
             <AddPlace handleAddPlace={this.handleAddPlace}/>
         );
-    };
-
-    storeChanged = () => {
-        this.setState({
-            places: this.props.store.getState().places
-        });
     };
 
     handleAddPlace = (placeName) => {
