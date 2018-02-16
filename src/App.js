@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import PeopleContainer from './containers/PeopleContainer';
 import PlacesContainer from './containers/PlacesContainer';
 import Header from './components/Header';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Home from './components/Home';
+import {Route} from 'react-router-dom';
 
 
 const App = (props) => {
 
     return (
-        <Router>
+        <div>
             <div align={'center'}>
 
                 <Header/>
@@ -23,7 +23,7 @@ const App = (props) => {
                 }}/>
 
             </div>
-        </Router>
+        </div>
     );
 }
 

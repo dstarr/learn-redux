@@ -8,7 +8,7 @@ class AddPlaceContainer extends React.Component {
         super(props);
 
         this.state = {
-            people: this.props.store.getState().people
+            people: this.props.store.getState().places
         }
 
     };
@@ -26,7 +26,7 @@ class AddPlaceContainer extends React.Component {
 
     storeChanged = () => {
         this.setState({
-            people: this.props.store.getState().people
+            places: this.props.store.getState().places
         });
     };
 
