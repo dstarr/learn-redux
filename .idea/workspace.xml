@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/containers/PeopleContainer.js" afterPath="$PROJECT_DIR$/src/containers/PeopleContainer.js" />
       <change beforePath="$PROJECT_DIR$/src/containers/PlacesContainer.js" afterPath="$PROJECT_DIR$/src/containers/PlacesContainer.js" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/peopleReducer.js" afterPath="$PROJECT_DIR$/src/reducers/peopleReducer.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,12 +24,14 @@
       <file leaf-file-name="PlacesContainer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/PlacesContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="54" lean-forward="false" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+            <state relative-caret-position="289">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#711#1648#0" expanded="false" />
-                <element signature="e#736#859#0" expanded="false" />
+                <element signature="e#553#1490#0" expanded="false" />
+                <element signature="e#578#701#0" expanded="false" />
+                <element signature="e#1518#1617#0" expanded="false" />
+                <element signature="e#1654#1853#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -39,12 +40,16 @@
       <file leaf-file-name="PeopleContainer.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/containers/PeopleContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+            <state relative-caret-position="646">
+              <caret line="79" column="2" lean-forward="false" selection-start-line="79" selection-start-column="2" selection-end-line="79" selection-end-column="2" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#577#699#0" expanded="false" />
-                <element signature="e#778#1041#0" expanded="false" />
+                <element signature="e#444#535#0" expanded="false" />
+                <element signature="e#582#704#0" expanded="false" />
+                <element signature="e#783#1046#0" expanded="false" />
+                <element signature="e#1652#1751#0" expanded="false" />
+                <element signature="e#1676#1742#0" expanded="false" />
+                <element signature="e#1807#1921#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -148,8 +153,8 @@
         <option value="$PROJECT_DIR$/src/components/AddPerson.js" />
         <option value="$PROJECT_DIR$/src/containers/AddPlaceContainer.js" />
         <option value="$PROJECT_DIR$/src/reducers/peopleReducer.js" />
-        <option value="$PROJECT_DIR$/src/containers/PlacesContainer.js" />
         <option value="$PROJECT_DIR$/src/containers/PeopleContainer.js" />
+        <option value="$PROJECT_DIR$/src/containers/PlacesContainer.js" />
       </list>
     </option>
   </component>
@@ -366,7 +371,7 @@
       <workItem from="1517955462288" duration="1464000" />
       <workItem from="1517956939491" duration="638000" />
       <workItem from="1518482165469" duration="444000" />
-      <workItem from="1518807933074" duration="7504000" />
+      <workItem from="1518807933074" duration="8042000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1511386111479</created>
@@ -634,11 +639,18 @@
       <option name="project" value="LOCAL" />
       <updated>1518812019008</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="everything is working, but with warnings on people and places deletion likely due to filtering technique.">
+      <created>1518819119594</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1518819119594</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108723000" />
+    <option name="totallyTimeSpent" value="109261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="987" extended-state="6" />
@@ -712,7 +724,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="RELOAD_CONTEXT" value="false" />
-    <MESSAGE value="CountWidgets PropTypes enforced" />
     <MESSAGE value="rendering people" />
     <MESSAGE value="rendering places and the counter reducer works." />
     <MESSAGE value="Deleting a person works." />
@@ -737,7 +748,8 @@
     <MESSAGE value="adding workspace to ignore file." />
     <MESSAGE value="fixed up using people instead of places" />
     <MESSAGE value="everything is working, but with warnings on people deletion" />
-    <option name="LAST_COMMIT_MESSAGE" value="everything is working, but with warnings on people deletion" />
+    <MESSAGE value="everything is working, but with warnings on people and places deletion likely due to filtering technique." />
+    <option name="LAST_COMMIT_MESSAGE" value="everything is working, but with warnings on people and places deletion likely due to filtering technique." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1043,24 +1055,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/PlacesContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="54" lean-forward="false" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#711#1648#0" expanded="false" />
-            <element signature="e#736#859#0" expanded="false" />
+            <element signature="e#553#1490#0" expanded="false" />
+            <element signature="e#578#701#0" expanded="false" />
+            <element signature="e#1518#1617#0" expanded="false" />
+            <element signature="e#1654#1853#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/PeopleContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+        <state relative-caret-position="646">
+          <caret line="79" column="2" lean-forward="false" selection-start-line="79" selection-start-column="2" selection-end-line="79" selection-end-column="2" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#577#699#0" expanded="false" />
-            <element signature="e#778#1041#0" expanded="false" />
+            <element signature="e#444#535#0" expanded="false" />
+            <element signature="e#582#704#0" expanded="false" />
+            <element signature="e#783#1046#0" expanded="false" />
+            <element signature="e#1652#1751#0" expanded="false" />
+            <element signature="e#1676#1742#0" expanded="false" />
+            <element signature="e#1807#1921#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -3,6 +3,7 @@ import {Table} from 'react-bootstrap';
 import Person from '../components/Person';
 import * as actions from '../actions/personActions'
 import AddPersonContainer from './AddPersonContainer';
+import PropTypes from 'prop-types';
 
 class PeopleContainer extends React.Component {
 
@@ -10,11 +11,11 @@ class PeopleContainer extends React.Component {
         super(props);
 
         this.state = {
-            people: this.props.store.getState().people
+            people: []
         }
     }
 
-    componentDidMount = () => {
+    componentWillMount = () => {
         this.props.store.subscribe(this.storeChanged);
         this.storeChanged();
     };
@@ -73,5 +74,9 @@ class PeopleContainer extends React.Component {
         this.props.store.dispatch(action);
     };
 }
+
+PeopleContainer.propTypes = {
+    store: PropTypes.object.isRequired
+};
 
 export default PeopleContainer;

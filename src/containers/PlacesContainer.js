@@ -12,20 +12,13 @@ class PlacesContainer extends React.Component {
         super(props);
 
         this.state = {
-            places: this.props.store.getState().places
+            places: []
         }
     }
 
-    componentDidMount = () => {
+    componentWillMount = () => {
         this.props.store.subscribe(this.storeChanged);
         this.storeChanged();
-    };
-
-    storeChanged = () => {
-        this.setState({
-            places: this.props.store.getState().places
-        });
-
     };
 
     render = () => {
@@ -66,6 +59,13 @@ class PlacesContainer extends React.Component {
         );
     };
 
+    storeChanged = () => {
+        this.setState({
+            places: this.props.store.getState().places
+        });
+
+    };
+
     onHandleDelete = (e, name) => {
 
         console.log('Places - onHandleDelete 1');
@@ -75,8 +75,7 @@ class PlacesContainer extends React.Component {
     };
 }
 
-PlacesContainer
-    .PropTypes = {
+PlacesContainer.propTypes = {
     store: PropTypes.object.isRequired
 };
 
