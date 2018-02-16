@@ -67,11 +67,8 @@ class PlacesContainer extends React.Component {
     };
 
     onHandleDelete = (e, name) => {
-
-        console.log('Places - onHandleDelete 1');
         let action = actions.deletePlace(name);
         this.props.store.dispatch(action);
-        console.log('Places - onHandleDelete 2');
     };
 }
 
