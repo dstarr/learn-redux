@@ -1,8 +1,8 @@
 import React from 'react';
-import {Table} from "react-bootstrap";
-import Person from "../components/Person";
+import {Table} from 'react-bootstrap';
+import Person from '../components/Person';
 import * as actions from '../actions/personActions'
-import AddPersonContainer from "./AddPersonContainer";
+import AddPersonContainer from './AddPersonContainer';
 
 class PeopleContainer extends React.Component {
 
@@ -10,15 +10,13 @@ class PeopleContainer extends React.Component {
         super(props);
 
         this.state = {
-            people: []
+            people: this.props.store.getState().people
         }
     }
 
-    componentWillMount = () => {
+    componentDidMount = () => {
         this.props.store.subscribe(this.storeChanged);
-        this.setState({
-            people: this.props.store.getState().people
-        });
+        this.storeChanged();
     };
 
     render = () => {

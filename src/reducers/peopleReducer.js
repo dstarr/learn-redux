@@ -2,15 +2,15 @@ import * as TYPES from '../actions/actionTypes';
 
 function peopleReducer(state = [], action) {
 
+    const person = {
+        firstName: action.first,
+        lastName: action.last,
+        occupation: action.occupation
+    };
+
     switch (action.type) {
 
         case TYPES.ADD_PERSON:
-
-            const person = {
-                firstName: action.first,
-                lastName: action.last,
-                occupation: action.occupation
-            };
 
             return state.concat(person);
 

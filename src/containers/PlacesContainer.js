@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Table} from "react-bootstrap";
-import Place from "../components/Place";
+import {Table} from 'react-bootstrap';
+import Place from '../components/Place';
 import * as actions from '../actions/placeActions'
-import AddPlaceContainer from "./AddPlaceContainer";
+import AddPlaceContainer from './AddPlaceContainer';
 
 
 class PlacesContainer extends React.Component {
@@ -12,15 +12,13 @@ class PlacesContainer extends React.Component {
         super(props);
 
         this.state = {
-            places: []
+            places: this.props.store.getState().places
         }
     }
 
-    componentWillMount = () => {
+    componentDidMount = () => {
         this.props.store.subscribe(this.storeChanged);
-        this.setState({
-           places: this.props.store.getState().places
-        });
+        this.storeChanged();
     };
 
     storeChanged = () => {
@@ -69,12 +67,16 @@ class PlacesContainer extends React.Component {
     };
 
     onHandleDelete = (e, name) => {
+
+        console.log('Places - onHandleDelete 1');
         let action = actions.deletePlace(name);
         this.props.store.dispatch(action);
+        console.log('Places - onHandleDelete 2');
     };
 }
 
-PlacesContainer.PropTypes = {
+PlacesContainer
+    .PropTypes = {
     store: PropTypes.object.isRequired
 };
 
